@@ -9,6 +9,9 @@
   <strong>Age:</strong>
   <%= @patient.age %>
 </p>
-
+<% @patient.appointments.each do |appt| %>
+  <%= appt.appointment_datetime.strftime("%B %d, %Y at %H:%M") %>
+  <%= appt.doctor %>
+<% end %>
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
 <%= link_to 'Back', patients_path %>
