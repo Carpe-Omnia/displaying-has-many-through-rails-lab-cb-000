@@ -2,7 +2,7 @@
 
 <p>
   <strong>Appointment datetime:</strong>
-  <%= @appointment.appointment_datetime %>
+  <%= @appointment.appointment_datetime.strftime("%B %d, %Y at %H:%M") %>
 </p>
 
 <p>
