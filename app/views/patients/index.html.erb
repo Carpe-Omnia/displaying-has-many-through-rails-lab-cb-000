@@ -11,17 +11,17 @@
     </tr>
   </thead>
 
-  <tbody>
+  <ul>
     <% @patients.each do |patient| %>
-      <tr>
-        <td><%= patient.name %></td>
-        <td><%= patient.age %></td>
-        <td><%= link_to 'Show', patient %></td>
-        <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
-        <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <li>
+      Name: <%= patient.name %><br/>
+        <%= patient.age %><br/>
+      <%= link_to 'Show', patient %><br/>
+        <%= link_to 'Edit', edit_patient_path(patient) %>
+        <%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %>
+      </li>
     <% end %>
-  </tbody>
+  </ul>
 </table>
 
 <br>
