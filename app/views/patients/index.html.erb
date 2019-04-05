@@ -14,7 +14,7 @@
   <ul>
     <% @patients.each do |patient| %>
       <li>
-      Name: <%= patient.name %>Number of Appointments: <%=patient.appointments.length%>
+      Name: <%= patient.name %> Number of Appointments: <%=patient.appointments.size%>
       <br/>
         <%= patient.age %><br/>
       <%= link_to 'Show', patient %><br/>
