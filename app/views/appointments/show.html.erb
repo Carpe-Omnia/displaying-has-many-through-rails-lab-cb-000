@@ -7,13 +7,13 @@
 
 <p>
   <strong>Doctor:</strong>
-  <%= @doctor.name %>
   <%= @doctor.department %>
+  <%= link_to @doctor.name, doctor_path(@doctor) %>
 </p>
 
 <p>
   <strong>Patient:</strong>
-  <%= @patient.name %>
+  <%= link_to @patient.name, doctor_path(@patient) %>
   <%= @patient.age %>
 </p>
 
