@@ -10,6 +10,7 @@ class AppointmentsController < ApplicationController
   # GET /appointments/1
   # GET /appointments/1.json
   def show
+    @doctor = Doctor.find_by(id: @appointment.doctor_id)
   end
 
   # GET /appointments/new
